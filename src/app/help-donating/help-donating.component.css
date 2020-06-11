@@ -1,0 +1,103 @@
+section.mastsect {
+    /* padding-top: 10rem; */
+    padding-bottom: 10rem;
+    background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../../assets/img/donating.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+ }
+
+ section.mastsect h1 {
+  font-size: 2.25rem;
+}
+@media (min-width: 992px) {
+  section.mastsect {
+    height: 110vh;
+    min-height: 40rem;
+    padding-top: 4.5rem;
+    padding-bottom: 0;
+  }
+  section.mastsect p {
+    font-size: 1.15rem;
+  }
+  section.mastsect h1 {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 1200px) {
+  section.mastsect h1 {
+    font-size: 3.5rem;
+  }
+}
+
+.container-position {
+  position: relative;
+  margin-left: 1rem;
+}
+
+.card {
+  box-shadow: 18px rgba(242,69,22,0.9);
+  transition: 0.3s;
+  width: 19rem;
+  height: 25rem;
+  border-radius: 5px;
+  background-color: rgb(251, 82, 82, 0.3);
+  border:3px solid rgb(251, 82, 82, 0.8);
+  cursor: pointer;
+  margin-bottom: 3rem;
+  transition: 0.8s;
+}
+
+.card:hover {
+  box-shadow: 16px 16px 16px 16px rgb(251, 82, 82, 1);
+  border: #FF0000;
+  transition: 0.8s;
+}
+
+img {
+  border-radius: 5px 5px 0 0;
+}
+
+.container-card {
+  padding: 2px 16px;
+}
+
+.col-sm {
+    padding: 3rem;
+    margin-right: 200rem;
+}
+
+.center-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: #177781;
+  color: white;
+}
+
+.center-btn:hover {
+  background-color: aqua;
+}
+
+.center-btn-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #177781;
+  color: white;
+}
+
+.center-btn-1:hover {
+  background-color: aqua;
+}
+
+h4 {
+  text-align: center;
+  padding: 10%;
+  padding-top: 20%;
+  text-shadow: 2px 2px #FF0000;
+  color: white;
+  font-family: "Lucida Console", Courier, monospace;
+}

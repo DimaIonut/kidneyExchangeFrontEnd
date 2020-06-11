@@ -1,0 +1,42 @@
+.full-width {
+  width: 100%;
+}
+
+td {
+  padding-right: 8px;
+}
+
+.only-login-btn {
+    background-color: #fb5151;
+    color: #fff !important;
+}
+
+.login-button {
+  margin-top: 20px;
+  display: block;
+  width: 80%;
+  margin: 20px auto;
+}
+
+.login-button:hover {
+    color: #fff;
+    background-color: #f24516;
+}
+
+mat-dialog-content {
+    padding: 0px;
+    font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+mat-tab-group.mat-primary.mat-ink-bar {
+     color: #fb5151;
+}
+
+.card {
+    box-shadow: none;
+    border-style: none;
+}
+
+mat-card-title {
+    width: 600px;
+}

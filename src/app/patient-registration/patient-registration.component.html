@@ -1,0 +1,84 @@
+<mat-card class="card">
+    <mat-card-title style="text-align:center;">Inregistreaza-te ca <b><u>primitor</u></b>!
+    </mat-card-title>
+    <mat-tab-group mat-stretch-tabs class="example-stretched-tabs">
+        <mat-tab label="Chestionar">
+            <mat-card-content color="primary">
+                <form class="">
+
+                    <table class="full-width" cellspacing="0">
+                        <tr>
+                            <td>
+                                <mat-form-field class="full-width">
+                                    <mat-label>Nume</mat-label>
+                                    <input matInput required name="name" ngModel #name="ngModel">
+                                    <mat-error *ngIf="name.invalid">Name is required</mat-error>
+                                </mat-form-field>
+                            </td>
+                            <td>
+                                <mat-form-field class="full-width">
+                                    <mat-label>Prenume</mat-label>
+                                    <input matInput required name="firstName" ngModel #firstName="ngModel">
+                                    <mat-error *ngIf="firstName.invalid">First Name is required</mat-error>
+                                </mat-form-field>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class="full-width" cellspacing="0">
+                        <tr>
+                            <td>
+                                <mat-form-field class="full-width">
+                                    <mat-label>Cod Numeric Personal(CNP)</mat-label>
+                                    <input matInput required name="cnp" ngModel #cnp="ngModel">
+                                    <mat-error *ngIf="cnp.invalid">CNP is required</mat-error>
+                                </mat-form-field>
+                            </td>
+                            <td>
+                                <mat-form-field class="full-width">
+                                    <mat-label>Seria si Numarul CI</mat-label>
+                                    <input matInput placeholder="Ex: XX123456" required name="seriaBi" ngModel
+                                        #seriaBi="ngModel">
+                                    <mat-error *ngIf="seriaBi.invalid">IC Series is required</mat-error>
+                                </mat-form-field>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <mat-form-field class="full-width">
+                        <mat-label>Adresa</mat-label>
+                        <input matInput placeholder="Ex: Str. Neculau, Nr. 21, Bloc 573, Ap. 13" required name="adress"
+                            ngModel #adress="ngModel">
+                        <mat-error *ngIf="adress.invalid">Adress is required</mat-error>
+                    </mat-form-field>
+
+                    <table class="full-width" cellspacing="0">
+                        <tr>
+                            <td>
+                                <mat-form-field class="full-width">
+                                    <mat-label>Orasul</mat-label>
+                                    <input matInput placeholder="Ex. Iasi" required name="city" ngModel #city="ngModel">
+                                    <mat-error *ngIf="city.invalid">City is required</mat-error>
+                                </mat-form-field>
+                            </td>
+                            <td>
+                                <mat-form-field class="full-width">
+                                    <mat-label>Judetul</mat-label>
+                                    <input matInput placeholder="Ex. Iasi" required name="country" ngModel
+                                        #country="ngModel">
+                                    <mat-error *ngIf="country.invalid">Country is required</mat-error>
+                                </mat-form-field>
+                            </td>
+                        </tr>
+                    </table>
+                    <button mat-raised-button color="primary" class="login-button only-login-btn">
+                        Inregistrare
+                    </button>
+
+                    <button mat-raised-button class="login-button" mat-dialog-close>
+                        Anulare
+                    </button>
+                </form>
+            </mat-card-content>
+        </mat-tab>
+    </mat-tab-group>
+</mat-card>

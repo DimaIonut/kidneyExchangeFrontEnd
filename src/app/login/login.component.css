@@ -1,0 +1,72 @@
+.card {
+  width: 23rem;
+  height: 28rem;
+  font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  border-style: none;
+  background-color: transparent;
+  position: relative;
+  padding: 0%;
+  margin: 0em;
+  box-shadow: none;
+}
+
+.dialog-content {
+    border: none;
+    background-color: transparent;
+}
+
+.login-page {
+  top: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: #303F9F;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+mat-card {
+  width: 30%;
+  margin: 10% auto;
+  border-radius: 8px;
+}
+mat-form-field, mat-checkbox {
+  width: 80%;
+  display: block;
+  margin: auto;
+}
+mat-card-content {
+  margin-top: 20px;
+}
+
+.only-login-btn {
+    background-color: #fb5151;
+    color: #fff !important;
+}
+
+.login-button {
+  margin-top: 20px;
+  display: block;
+  width: 80%;
+  margin: 20px auto;
+}
+
+.login-button:hover {
+    color: #fff;
+    background-color: #f24516;
+}
+
+mat-dialog-content {
+    padding: 0px;
+    width: 23rem;
+    height: 28rem;
+    font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+mat-tab-group {
+     color: #fb5151;
+}

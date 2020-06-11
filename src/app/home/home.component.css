@@ -1,0 +1,86 @@
+.menu-btn-style {
+    background-color: #fb5151;
+    color: #fff !important;
+}
+
+.menu-btn-style:hover {
+    color: #fff;
+    background-color: #f24516;
+}
+
+.p-describe {
+   font-size: larger;
+   font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+mat-icon {
+    color: #fb5151;
+    margin-left:30px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+mat-icon:hover {
+    color: #f24516;
+    transition: 0.8s;    
+}
+
+.account-button { 
+  background: transparent;
+  border-radius: 10px;
+  position: relative;
+  padding: 0;
+  margin-left: 50px;
+}
+
+.account-button:hover {
+  background: rgba(255,162,161, 0.9); 
+}
+
+.account-button:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 100%;
+  right: 10%;
+  margin-top: 3px;
+  background: rgba(255,162,161, 0.9);
+  padding: 12px;
+  border-radius: 3px;
+  transition: 0.8s;
+  color: white;
+}
+
+img {
+    border-radius: 10px;
+    width: 45px;
+    height: 45px;
+}
+
+.container-dimension {
+    max-width: 1350px;
+}
+
+.nav-height {
+    padding: 0;
+    margin: 0px;
+}
+
+.main-menu-btn-style {
+    margin-left: 10px !important;
+    margin: 5px !important;
+    padding: 8px;
+    height: 70%;
+}
+
+.img-icon {
+     width: 30px !important;
+    height: 30px !important;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}

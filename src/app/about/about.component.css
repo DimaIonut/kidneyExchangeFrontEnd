@@ -1,0 +1,60 @@
+section.mastsect {
+    /* padding-top: 10rem; */
+    padding-bottom: 10rem;
+    background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../../assets/img/about_me.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+ }
+
+ section.mastsect h1 {
+  font-size: 2.25rem;
+}
+@media (min-width: 992px) {
+  section.mastsect {
+    height: 120vh;
+    min-height: 40rem;
+    padding-top: 4.5rem;
+    padding-bottom: 0;
+  }
+  section.mastsect p {
+    font-size: 1.15rem;
+  }
+  section.mastsect h1 {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 1200px) {
+  section.mastsect h1 {
+    font-size: 3.5rem;
+  }
+}
+
+.container-position {
+  position: relative;
+  margin-left: 1rem;
+}
+
+mat-icon {
+    font-size: larger;
+    color: white;
+    margin: 2%;
+}
+
+mat-card {
+    background-color: transparent;
+    padding: 2%;
+    margin-top: 5%;
+    font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: larger;
+    color: white;
+    transition: 1s;
+}
+
+mat-card:hover {
+    background-color: #fb5151;
+    transition: 1s;
+    cursor: pointer;
+    box-shadow: 2px 2px 8px 2px rgb(251, 82, 82, 1);
+}
