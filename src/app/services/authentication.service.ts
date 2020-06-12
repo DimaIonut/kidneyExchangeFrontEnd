@@ -51,6 +51,21 @@ export class AuthenticationService {
   getUsername() {
     return sessionStorage.getItem('username');
   }
+
+  registration(username, email, password, type) {
+    this.isWait = true;
+    return this.httpClient.post<any>('http://localhost:8080/registration', { username, email, password, type }).pipe(
+      map(
+        userData => {
+
+          this.isWait = false;
+          return userData;
+        }
+      )
+
+    );
+  }
+
 }
 
 

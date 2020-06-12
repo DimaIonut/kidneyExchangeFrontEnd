@@ -37,7 +37,8 @@
             <mat-card-content>
                 <form action="">
                     <mat-form-field>
-                        <input matInput placeholder="User Name" required name="username" ngModel #username="ngModel">
+                        <input matInput placeholder="User Name" required name="username" [(ngModel)]="usernameRegister"
+                            #username="ngModel">
                         <mat-icon matSuffix>perm_identity</mat-icon>
                         <mat-error *ngIf="username.invalid">
                             Username is required
@@ -45,13 +46,14 @@
 
                     </mat-form-field>
                     <mat-form-field>
-                        <input matInput placeholder="Email" required name="email" ngModel #email="ngModel">
+                        <input matInput placeholder="Email" required name="email" [(ngModel)]="emailRegister"
+                            #email="ngModel">
                         <mat-error *ngIf="email.invalid">Email is required</mat-error>
                         <mat-icon matSuffix>email</mat-icon>
                     </mat-form-field>
                     <mat-form-field>
                         <input matInput placeholder="Password" type="password" required minlength="6" name="password"
-                            ngModel #password="ngModel">
+                            [(ngModel)]="passwordRegister" #password="ngModel">
                         <mat-error *ngIf="password.errors && password.errors.required">
                             Password is required
                         </mat-error>
@@ -72,7 +74,8 @@
                         <mat-icon matSuffix>face</mat-icon>
                     </mat-form-field>
                     <!--  -->
-                    <button mat-raised-button color="primary" class="login-button only-login-btn">
+                    <button mat-raised-button color="primary" class="login-button only-login-btn"
+                        (click)=checkRegistration() mat-dialog-close>
                         Inregistrare
                     </button>
 

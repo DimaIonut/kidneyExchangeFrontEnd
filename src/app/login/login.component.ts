@@ -18,6 +18,10 @@ export class LoginComponent implements OnInit {
   usernameText = '';
   passwordText = '';
   invalidLogin = false
+  usernameRegister = '';
+  emailRegister = '';
+  passwordRegister = '';
+
 
   constructor(private router: Router,
     private loginservice: AuthenticationService, public loginValidationBar: MatSnackBar) { }
@@ -62,6 +66,30 @@ export class LoginComponent implements OnInit {
         this.invalidLogin = true;
         console.log('Invalid username or password... :( ');
 
+      }
+    )
+    );
+
+  }
+
+  checkRegistration() {
+    (this.loginservice.registration(this.usernameRegister, this.emailRegister, this.passwordRegister, this.myControl.value.toLowerCase()).subscribe(
+      data => {
+        this.router.navigateByUrl('/#page-top').then(() => {
+          this.loginValidationBar.open("V-ati inregistrat cu succes!", "OK", {
+            panelClass: ['green-snackbar']
+          });
+          window.scrollTo(0, 0);
+        });
+      },
+      error => {
+        this.loginservice.isWait = false;
+        this.router.navigateByUrl('/#page-top').then(() => {
+          this.loginValidationBar.open("Din pacate inregistrarea nu a avut loc! Incercati cu alt nume de utilizator", "OK", {
+            panelClass: ['green-snackbar']
+          });
+          window.scrollTo(0, 0);
+        });
       }
     )
     );
