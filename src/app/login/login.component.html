@@ -46,8 +46,8 @@
 
                     </mat-form-field>
                     <mat-form-field>
-                        <input matInput placeholder="Email" required name="email" [(ngModel)]="emailRegister"
-                            #email="ngModel">
+                        <input matInput placeholder="Adresa de mail" required name="email" [(ngModel)]="emailRegister"
+                            #email="ngModel" type="email">
                         <mat-error *ngIf="email.invalid">Email is required</mat-error>
                         <mat-icon matSuffix>email</mat-icon>
                     </mat-form-field>

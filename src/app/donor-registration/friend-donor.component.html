@@ -1,5 +1,5 @@
 <mat-card class="card">
-    <mat-card-title style="text-align:center;">Inregistreaza-te ca <b><u>prieten al unui pacient</u></b>!
+    <mat-card-title style="text-align:center;">Inregistreaza-te ca <b><u>prieten</u></b> al unui pacient!
     </mat-card-title>
     <mat-tab-group mat-stretch-tabs class="example-stretched-tabs">
         <mat-tab label="Chestionar">
@@ -11,14 +11,15 @@
                             <td>
                                 <mat-form-field class="full-width">
                                     <mat-label>Nume</mat-label>
-                                    <input matInput required name="name" ngModel #name="ngModel">
+                                    <input matInput required name="name" [(ngModel)]="lastNameText" #name="ngModel">
                                     <mat-error *ngIf="name.invalid">Name is required</mat-error>
                                 </mat-form-field>
                             </td>
                             <td>
                                 <mat-form-field class="full-width">
                                     <mat-label>Prenume</mat-label>
-                                    <input matInput required name="firstName" ngModel #firstName="ngModel">
+                                    <input matInput required name="firstName" [(ngModel)]="firstNameText"
+                                        #firstName="ngModel">
                                     <mat-error *ngIf="firstName.invalid">First Name is required</mat-error>
                                 </mat-form-field>
                             </td>
@@ -28,49 +29,35 @@
                         <tr>
                             <td>
                                 <mat-form-field class="full-width">
-                                    <mat-label>Cod Numeric Personal(CNP)</mat-label>
-                                    <input matInput required name="cnp" ngModel #cnp="ngModel">
-                                    <mat-error *ngIf="cnp.invalid">CNP is required</mat-error>
+                                    <mat-label>Adresa de email</mat-label>
+                                    <input matInput placeholder="Ex: nume.prenume@gmail.com" required name="email"
+                                        [(ngModel)]="emailText" #email="ngModel">
+                                    <mat-error *ngIf="email.invalid">Email is required</mat-error>
                                 </mat-form-field>
                             </td>
-                            <td>
-                                <mat-form-field class="full-width">
-                                    <mat-label>Seria si Numarul CI</mat-label>
-                                    <input matInput placeholder="Ex: XX123456" required name="seriaBi" ngModel
-                                        #seriaBi="ngModel">
-                                    <mat-error *ngIf="seriaBi.invalid">IC Series is required</mat-error>
-                                </mat-form-field>
-                            </td>
-                        </tr>
-                    </table>
-
-                    <mat-form-field class="full-width">
-                        <mat-label>Adresa</mat-label>
-                        <input matInput placeholder="Ex: Str. Neculau, Nr. 21, Bloc 573, Ap. 13" required name="adress"
-                            ngModel #adress="ngModel">
-                        <mat-error *ngIf="adress.invalid">Adress is required</mat-error>
-                    </mat-form-field>
-
-                    <table class="full-width" cellspacing="0">
-                        <tr>
                             <td>
                                 <mat-form-field class="full-width">
                                     <mat-label>Orasul</mat-label>
-                                    <input matInput placeholder="Ex. Iasi" required name="city" ngModel #city="ngModel">
+                                    <input matInput placeholder="Ex: Iasi" required name="city" [(ngModel)]="cityText"
+                                        #city="ngModel">
                                     <mat-error *ngIf="city.invalid">City is required</mat-error>
-                                </mat-form-field>
-                            </td>
-                            <td>
-                                <mat-form-field class="full-width">
-                                    <mat-label>Judetul</mat-label>
-                                    <input matInput placeholder="Ex. Iasi" required name="country" ngModel
-                                        #country="ngModel">
-                                    <mat-error *ngIf="country.invalid">Country is required</mat-error>
                                 </mat-form-field>
                             </td>
                         </tr>
                     </table>
-                    <button mat-raised-button color="primary" class="login-button only-login-btn">
+
+                    <section class="example-section full-width">
+                        <label class="">Grupa de sange:</label>
+                        <mat-radio-group [(ngModel)]="grupaSangeValoare" name="grupaSange" #grupaSange="ngModel">
+                            <mat-radio-button value="0">Grupa 0</mat-radio-button>
+                            <mat-radio-button value="A">Grupa A</mat-radio-button>
+                            <mat-radio-button value="B">Grupa B</mat-radio-button>
+                            <mat-radio-button value="AB">Grupa AB</mat-radio-button>
+                        </mat-radio-group>
+                    </section>
+
+                    <button mat-raised-button color="primary" class="login-button only-login-btn" mat-dialog-close
+                        (click)=donorRegistation()>
                         Inregistrare
                     </button>
 
