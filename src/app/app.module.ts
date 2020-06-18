@@ -50,7 +50,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     FamilyMemberComponent,
     FriendDonorComponent,
     PatientRegistrationComponent,
-    TogetherRegistrationComponent,
+    TogetherRegistrationComponent
   ],
   imports: [
     BrowserModule,

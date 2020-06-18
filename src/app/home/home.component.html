@@ -31,7 +31,7 @@
                 <li><a class="btn btn-primary ml-3 mt-0-1 js-scroll-trigger menu-btn-style" (click)="logOut()"
                         routerLinkActive="active" *ngIf="loginService.isUserLoggedIn()">Deconectare</a></li>
             </ul>
-            <a *ngIf="loginService.isUserLoggedIn()">
+            <a *ngIf="loginService.isUserLoggedIn()" [routerLink]="'/profile'">
                 <!-- <mat-icon class="border-account">account_circle</mat-icon> -->
                 <button class="account-button" data-tooltip="Vizualizati Profilul">
                     <img src="../../assets/img/account_icon.jfif" alt="Acount Icon">

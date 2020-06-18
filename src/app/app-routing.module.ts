@@ -8,6 +8,7 @@ import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { StatisticComponent } from './statistic/statistic.component';
 import { AboutComponent } from './about/about.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 const routes: Routes = [
@@ -18,10 +19,12 @@ const routes: Routes = [
   { path: 'statistic', component: StatisticComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'footer', component: FooterComponent }
+  { path: 'footer', component: FooterComponent },
+  { path: 'profile', component: ProfileComponent }
 ];
 
 @NgModule({
+  declarations: [ProfileComponent],
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
