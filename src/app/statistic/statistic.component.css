@@ -1,7 +1,7 @@
 section.mastsect {
     /* padding-top: 10rem; */
     padding-bottom: 10rem;
-    background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../../assets/img/work_in_progress.jpg");
+    background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../../assets/img/medicalAlgoritm.jpeg");
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -13,8 +13,8 @@ section.mastsect {
 }
 @media (min-width: 992px) {
   section.mastsect {
-    height: 120vh;
-    min-height: 40rem;
+    height: auto;
+    min-height: 30rem;
     padding-top: 4.5rem;
     padding-bottom: 0;
   }
@@ -25,7 +25,7 @@ section.mastsect {
     font-size: 3rem;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   section.mastsect h1 {
     font-size: 3.5rem;
   }
@@ -34,4 +34,56 @@ section.mastsect {
 .container-position {
   position: relative;
   margin-left: 1rem;
+}
+
+.container {
+  max-width: 1400px;
+}
+
+.my-btn {
+  color: #fff !important;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 47%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+table {
+  width: 100%;
+}
+
+mat-card {
+    background-color: rgb(251, 82, 82, 0.3);
+    padding: 2%;
+    margin-top: 5%;
+    font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: larger;
+    color: white;
+    transition: 1s;
+    margin: 2%;
+    border-radius: 50px 20px;
+}
+
+mat-card:hover {
+    background-color: rgb(251, 82, 82, 0.3);
+    transition: 1s;
+    cursor: pointer;
+    box-shadow: 2px 2px 8px 2px rgb(251, 82, 82, 1);
+}
+
+.item-list{
+  margin: 5%;
+}
+
+mat-list {
+   overflow: auto;
+}
+
+mat-icon {
+  color:rgb(251, 82, 82, 1);
+  font-size: 40px;
 }

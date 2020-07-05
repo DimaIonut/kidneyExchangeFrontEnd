@@ -1,13 +1,50 @@
-<section class="page-section bg-primary mastsect" id="statistic">
+<section class="page-section bg-primary mastsect" id="perechi">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8 text-center">
-                <h2 class="text-white mt-0">Statistici privind situatia transplanturilor efectuare si a pacientilor in
-                    asteptare prezente pe aceasta platforma</h2>
+                <h2 class="text-white mt-0">Perechile finale <b>pacient+donator</b> în urma procesării datelor de catre
+                    Algoritm</h2>
                 <hr class="divider light my-4" />
+                <a class="btn btn-primary btn-xl js-scroll-trigger my-btn" href="#perechi"
+                    (click)=getFinalPairs()>Găseste
+                    compatibilitățile!</a>
             </div>
         </div>
+
         <div class="container container-position">
+
+            <mat-list>
+                <mat-list-item *ngFor="let pair of finalPairs" class="item-list">
+                    <mat-card>
+                        {{pair.nameP1}},
+                        grupa: {{pair.bloodP1}}
+                        <b>+</b>
+                        {{pair.nameD1}},
+                        grupa: {{pair.bloodD1}}
+                    </mat-card>
+                    <mat-icon *ngIf="pair.nameP2">swap_horiz</mat-icon>
+                    <mat-card *ngIf="pair.nameP2">
+                        {{pair.nameP2}},
+                        grupa: {{pair.bloodP2}}
+                        <b>+</b>
+                        {{pair.nameD2}},
+                        grupa: {{pair.bloodD2}}
+                    </mat-card>
+                    <mat-icon *ngIf="pair.nameP3">swap_horiz</mat-icon>
+                    <mat-card *ngIf="pair.nameP3">
+                        {{pair.nameP3}},
+                        grupa: {{pair.bloodP3}}
+                        <b>+</b>
+                        {{pair.nameD3}},
+                        grupa: {{pair.bloodD3}}
+                    </mat-card>
+                </mat-list-item>
+            </mat-list>
+
+
+            <mat-progress-spinner class="centered" mode="indeterminate" value="20" color="warn" *ngIf="isWaitServer">
+            </mat-progress-spinner>
+
 
         </div>
     </div>

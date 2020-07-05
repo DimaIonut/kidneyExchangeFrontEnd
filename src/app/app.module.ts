@@ -33,6 +33,7 @@ import { PatientRegistrationComponent, TogetherRegistrationComponent } from './p
 import { HttpClientModule } from '@angular/common/http';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -71,7 +72,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     HttpClientModule,
     MatSnackBarModule,
     MatTooltipModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent],

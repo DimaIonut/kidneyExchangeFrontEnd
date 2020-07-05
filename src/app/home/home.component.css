@@ -80,7 +80,7 @@ img {
 .centered {
   position: fixed;
   top: 50%;
-  left: 50%;
+  left: 47%;
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
 }
